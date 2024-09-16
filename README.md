@@ -27,12 +27,11 @@ In addition, you will also provide your ideas, insights, and suggestions to thos
 ## Data Model
 ![image](https://github.com/user-attachments/assets/10162b77-ae3b-425a-8014-ea0d65eda0f7)
 
-## Analysis
-### Dashboard
-#### 1. Overview
+## Dashboard
+### 1. Overview
 ![image](https://github.com/user-attachments/assets/a354c8dc-4326-4756-bc78-005e37b6b8f6)
 
-#### 2. Product Information
+### 2. Product Information
 ![image](https://github.com/user-attachments/assets/2a0a761b-2c77-473a-94dd-8ff233b7ee1d)
 
 
