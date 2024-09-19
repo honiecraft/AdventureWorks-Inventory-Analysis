@@ -1,4 +1,5 @@
 # AdventureWorks Inventory Analysis [Power BI]
+This project aims to **build Dashboard using Power BI** to give a complete and understandable picture of the **warehouse data**, from there provide ideas, insights, and suggestions to stakeholders.
 
 ## About
 **AdventureWorks** database supports standard online transaction processing scenarios for a *fictitious bicycle manufacturer* - **Adventure Works Cycles**. Scenarios include *Manufacturing, Sales, Purchasing, Product Management, Contact Management, and Human Resources*.
@@ -9,9 +10,9 @@ Warehouses are located in many different locations for convenience and optimizat
 From there, build appropriate strategies to better manage and operate storage activities.
 - **Sales people and the Marketing team** also need to *monitor the amount of goods in the warehouse to build, control, and adjust sales and marketing campaigns accordingly*.
 
-> **Requirements:**
-> As a data analyst, you help stakeholders have a complete and easy-to-understand picture of warehouse data, helping them make better decisions and operations.
-In addition, you will also provide your ideas, insights, and suggestions to those stakeholders.
+> **Objective**\
+> Building Dashboard for stakeholders to have a complete and easy-to-understand picture of warehouse data, helping them make better decisions and operations.
+In addition, providing ideas, insights, and suggestions to those stakeholders.
 
 ## Dataset  
 - Project used dataset of AdventureWorks from BigQuery, to **connect BigQuery with PowerBI**, please follow [this](https://learn.microsoft.com/en-us/power-query/connectors/google-bigquery) instruction.
