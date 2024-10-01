@@ -28,15 +28,26 @@ In addition, providing ideas, insights, and suggestions to those stakeholders.
 ## Data Model
 ![image](https://github.com/user-attachments/assets/10162b77-ae3b-425a-8014-ea0d65eda0f7)
 
-## Dashboard
+## Calculations
+Use **DAX** queries to generate **Calculated columns** and **Measures** for visulazition and analysis:
+- `StockStatus`
+  - **Outstock** (StockedQty = 0)
+  - **Reorder** (StockedQty <= ReorderPoint)
+  - **Safety** (StockedQty >= SafetyStockLevel)
+  - **Below Safety**
+- `FinishedGoodsStatus` **Non-Salable** when FinishedGoodsFlag = 0 and **Salable** when FinishedGoodsFlag = 1
+- `MakeStatus` **Purchased** when MakeFlag = 0 and **Manufactured** when MakeFlag = 1
+- `CategoryModified` and `SubcategoryModified` to deal with missing ProductSubcategoryID of _purchased_ product by converting to **Other** type
+- Number of products by StockStatus, Total quantity and value of inventory
+ 
+
+## Dashboard and Insight
+Data visualization for the datasets was done in 2 pages using Microsoft Power BI Desktop.
+Based on the business problem, the following report was prepared:
+- The `Overview` page: gives a **summary of the Adventureworks inventory**, total number of products, volume, value, **stock status** (safety, below safety, backorder, out of stock), and several other elements, like make status (manufactured or purchased), etc.
+- The `Product Information` page: Provides **detailed information about products**, such as categories, stock levels, and storage locations, etc.
 ### 1. Overview
 ![image](https://github.com/user-attachments/assets/a354c8dc-4326-4756-bc78-005e37b6b8f6)
-
-### 2. Product Information
-![image](https://github.com/user-attachments/assets/2a0a761b-2c77-473a-94dd-8ff233b7ee1d)
-
-
-## Insight
 - The **Total number of products in stock** of the company is 504 products, of which (363 products are at the Safe level, 61 products are Below the Safety level, 4 products need to be Reordered, 76 products are Out of Stock)
 - The **total quantity of goods** is 336k with the **highest number of nonsalable items (category Other)** 76.84%, Components (14.05%), Bikes (4.62%), Accessories (2.72%), Clothing (1.77%)
 - **Inventory value:** total inventory value is 20m, in which _Category Bike has the lowest quantity but the highest value_ compared to the remaining categories (14.6m), on the contrary, _category Other has the highest quantity but the value is relatively low_ (867k).
@@ -52,6 +63,13 @@ In addition, providing ideas, insights, and suggestions to those stakeholders.
   - **Outstock** items are mostly in Component category (53.72%), few in Clothing (8.57%);
   - **Reorder** quantity is very low (1 Bike product, 2 Other products, 1 Components product).
 - **Overstock**: There are some products with very **high inventory compared to the set safety level** (up to 80x), mainly from Clothing and Accessories items (purchased products).
+  
+### 2. Product Information
+![image](https://github.com/user-attachments/assets/2a0a761b-2c77-473a-94dd-8ff233b7ee1d)
+
+- This dashboard offers a thorough view of **product details**, including location, safety level and reorder point, stock status, actual inventory quantities and lot of other relevent informations. 
+- It also includes **filters** to view the dashboard according to **categories, subcategories, inventory status, and location**.
+
 
 ## Recommend
 - Check the **reasons for overstock items** (buying in reserve, slow-moving goods or safety level set too low);
